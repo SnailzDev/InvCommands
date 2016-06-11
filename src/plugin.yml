@@ -42,8 +42,14 @@ permissions:
         description: Allows the player to open an enderchest for another player
         default: op
     invcommands.openinv.inventory:
-        description: Allows the player to open another playe's inventory
+        description: Allows the player to open another players inventory
+        default: op
+    invcommands.openinv.inventory.others:
+        description: Allows the player to open a players inventory for another player
         default: op
     invcommands.openinv.enderchest:
         description: Allows the player to open another players enderchest
         depault: op
+    invcommands.openinv.enderchest.others:
+        description: Allows the player to open a players enderchest for another player
+        default: op
