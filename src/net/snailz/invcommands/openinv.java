@@ -33,12 +33,8 @@ public class openinv implements CommandExecutor{
             if (sender instanceof Player){
                 Player player = (Player) sender;
                 if (args[0].equalsIgnoreCase("inventory")){
-                    if (!player.hasPermission("invcommands.openinv.inv")){
-                        player.sendMessage(ChatColor.RED + "Im sorry but you do not have permission for that command!");
-                        return true;
-                    }
                     if (args.length == 3){
-                        if (!player.hasPermission("invcommands.openinv.inv.others")){
+                        if (!player.hasPermission("invcommands.openinv.inventory.others")){
                             player.sendMessage(ChatColor.RED + "Im sorry but you do not have permission for that command!");
                             return true;
                         }
@@ -50,12 +46,12 @@ public class openinv implements CommandExecutor{
                             return true;
                         }
                         else {
-                            sender.sendMessage(Main.pluginprefix + ChatColor.GOLD + args[1] + " is not online!");
+                            sender.sendMessage(Main.pluginprefix + ChatColor.GOLD + args[1] + " or " + args[2] + ChatColor.GREEN " is not online!");
                             return true;
                         }
                     }
                     if (args.length == 2){
-                        if (!player.hasPermission("invcommands.openinv.enderchest")){
+                        if (!player.hasPermission("invcommands.openinv.inventory")){
                             player.sendMessage(ChatColor.RED + "Im sorry but you do not have permission for that command!");
                         return true;
                         }
@@ -70,19 +66,38 @@ public class openinv implements CommandExecutor{
                             return true;
                         }
                     if (args[0].equalsIgnoreCase("enderchest")){
-                        if (!player.hasPermission("invcommands.openinv.enderchest")){
-                            player.sendMessage(ChatColor.RED + "Im sorry but you do not have permission for that command!");
-                        return true;
+                        if (args.length == 3){
+                            if (!player.hasPermission("invcommands.openinv.enderchest.others")){
+                                player.sendMessage(ChatColor.RED + "Im sorry but you do not have permission for that command!");
+                                return true;
+                            }
+                            if (plugin.getServer().getPlayer(args[1]) != null && plugin.getServer().getPlayer(args[2]) != null){
+                                Player player2 = plugin.getServer().getPlayer(args[1]);
+                                Player player3 = plugin.getServer().getPlayer(args[2]);
+                                player3.openInventory(player2.getEnderChest());
+                                sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Oppend inventory of " + ChatColor.GOLD + args[1] + ChatColor.GREEN + " for " + ChatColor.GOLD + args[2]);
+                                return true;
+                            }
+                            else {
+                                sender.sendMessage(Main.pluginprefix + ChatColor.GOLD + args[1] + " or " + args[2] + ChatColor.GREEN " is not online!");
+                                return true;
+                            }
                         }
-                        if (plugin.getServer().getPlayer(args[1]) != null){
-                            Player player2 = plugin.getServer().getPlayer(args[1]);
-                            player.openInventory(player2.getEnderChest());
-                            sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Oppend enderchest of " + ChatColor.GOLD + args[1]);
+                        if (args.length == 2){
+                            if (!player.hasPermission("invcommands.openinv.enderchest")){
+                                player.sendMessage(ChatColor.RED + "Im sorry but you do not have permission for that command!");
                             return true;
-                        }
-                        else {
-                            sender.sendMessage(Main.pluginprefix + ChatColor.GOLD + args[1] + " is not online!");
-                            return true;
+                            }
+                            if (plugin.getServer().getPlayer(args[1]) != null){
+                                Player player2 = plugin.getServer().getPlayer(args[1]);
+                                player.openInventory(player2.getEnderChest());
+                                sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Oppend enderchest of " + ChatColor.GOLD + args[1]);
+                                return true;
+                            }
+                            else {
+                                sender.sendMessage(Main.pluginprefix + ChatColor.GOLD + args[1] + " is not online!");
+                                return true;
+                            }
                         }
                     }
                 return false;
