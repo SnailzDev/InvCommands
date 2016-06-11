@@ -1,0 +1,49 @@
+name: InvCommands
+main: net.snailz.invcommands.Main
+version: 0.1
+author: Snailz
+commands:
+    workbench:
+        description: Opens a workbench
+        aliases: [workb, craft, wb]
+        permission: invcommands.workbench
+        usage: /workbench [playername]
+    enchantmenttable:
+        description: Opens an enchantment table
+        aliases: [enchantment, et, enchanttable, etable]
+        permission: invcommands.enchant
+        usage: /enchantmenttable [playername]
+    endchest:
+        description: Opens an enderchest
+        aliases: [echest, ec, endchest]
+        permission: invcommands.enderchest
+        usage: /enderchest [playername]
+    openinv:
+        description: Opens a players inventory
+        aliases: [openinventory]
+        permission: invcommands.openinv.*
+        usage: /openinv <inventory type> <player>
+permissions:
+    invcommands.workbench:
+        description: Allows the player to open a workbench
+        default: op
+    invcommands.workbench.others:
+        description: Allows the player to open a workbench for another player
+        default: op
+    invcommands.enchant:
+        description: Allows the player to open an enchantment table
+        default: op
+    invcommands.enchant.others:
+        description: Allows the player to open an enchantment table for another player
+    invcommands.enderchest:
+        description: Allows the player to open an enderchest
+        default: op
+    invcommands.enderchest.others:
+        description: Allows the player to open an enderchest for another player
+        default: op
+    invcommands.openinv.inventory:
+        description: Allows the player to open another playe's inventory
+        default: op
+    invcommands.openinv.enderchest:
+        description: Allows the player to open another players enderchest
+        depault: op
