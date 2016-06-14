@@ -42,7 +42,7 @@ public class enchantmenttable implements CommandExecutor{
             if (args.length == 1){
                 if (sender instanceof Player){
                     Player commandsender = (Player) sender;
-                    if (!commandsender.hasPermission("invcommands.enchantment.others")){
+                    if (!commandsender.hasPermission("invcommands.enchantmenttable.others")){
                         commandsender.sendMessage(ChatColor.RED + "Im sorry but you do not have permission for that command!");
                         return true;
                     }

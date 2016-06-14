@@ -5,15 +5,11 @@
  */
 package net.snailz.invcommands;
 
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.event.inventory.InventoryType;
-import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.PlayerInventory;
 
 /**
  *
@@ -46,7 +42,7 @@ public class openinv implements CommandExecutor{
                             return true;
                         }
                         else {
-                            sender.sendMessage(Main.pluginprefix + ChatColor.GOLD + args[1] + " or " + args[2] + ChatColor.GREEN " is not online!");
+                            
                             return true;
                         }
                     }
@@ -65,6 +61,8 @@ public class openinv implements CommandExecutor{
                             sender.sendMessage(Main.pluginprefix + ChatColor.GOLD + args[1] + " is not online!");
                             return true;
                         }
+                    }
+                }
                     if (args[0].equalsIgnoreCase("enderchest")){
                         if (args.length == 3){
                             if (!player.hasPermission("invcommands.openinv.enderchest.others")){
@@ -75,11 +73,11 @@ public class openinv implements CommandExecutor{
                                 Player player2 = plugin.getServer().getPlayer(args[1]);
                                 Player player3 = plugin.getServer().getPlayer(args[2]);
                                 player3.openInventory(player2.getEnderChest());
-                                sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Oppend inventory of " + ChatColor.GOLD + args[1] + ChatColor.GREEN + " for " + ChatColor.GOLD + args[2]);
+                                sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Oppend enderchest of " + ChatColor.GOLD + args[1] + ChatColor.GREEN + " for " + ChatColor.GOLD + args[2]);
                                 return true;
                             }
                             else {
-                                sender.sendMessage(Main.pluginprefix + ChatColor.GOLD + args[1] + " or " + args[2] + ChatColor.GREEN " is not online!");
+                                sender.sendMessage(Main.pluginprefix + ChatColor.GOLD + args[1] + " or " + args[2] + ChatColor.GREEN + " is not online!");
                                 return true;
                             }
                         }
@@ -101,14 +99,13 @@ public class openinv implements CommandExecutor{
                         }
                     }
                 return false;
+    
+    
             }
             else{
                 sender.sendMessage(Main.pluginprefix + ChatColor.RED + "You Must Be A Player To Execute This Command!");
-                return true;
             }
         }
         return false;
     }
-    
-    
 }
