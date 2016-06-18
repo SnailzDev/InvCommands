@@ -21,6 +21,7 @@ public class Main extends JavaPlugin{
         this.getCommand("enchantmenttable").setExecutor(new enchantmenttable (this));
         this.getCommand("endchest").setExecutor(new enderchest (this));
         this.getCommand("openinv").setExecutor(new openinv (this));
+        this.getCommand("anvil").setExecutor(new anvil (this));
     }
     
 }

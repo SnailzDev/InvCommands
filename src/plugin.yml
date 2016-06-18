@@ -7,22 +7,26 @@ commands:
         description: Opens a workbench
         aliases: [workb, craft, wb]
         permission: invcommands.workbench
-        usage: /workbench [playername]
+        usage: /workbench [player]
     enchantmenttable:
         description: Opens an enchantment table
         aliases: [enchantment, et, enchanttable, etable]
         permission: invcommands.enchantmenttable
-        usage: /enchantmenttable [playername]
+        usage: /enchantmenttable [player]
     enderchest:
         description: Opens an enderchest
         aliases: [echest, ec, endchest]
         permission: invcommands.enderchest
-        usage: /enderchest [playername]
+        usage: /enderchest [playe]
     openinv:
         description: Opens a players inventory
         aliases: [openinventory, oi, openi]
         permission: invcommands.openinv.*
         usage: /openinv <inventory type> <player> [player]
+    anvil:
+        description: Opens an anvil
+        permission: invcommands.anvil
+        usage: /anvil [player]
 permissions:
     invcommands.workbench:
         description: Allows the player to open a workbench
@@ -43,6 +47,12 @@ permissions:
         default: op
     invcommands.openinv.inventory:
         description: Allows the player to open another players inventory
+        default: op
+    invcommands.anvil:
+        description: Allows the player to open an anvil
+        default: op
+    invcommands.anvil.others:
+        description: Allows the player to open an anvil for another player
         default: op
     invcommands.openinv.inventory.others:
         description: Allows the player to open a players inventory for another player
