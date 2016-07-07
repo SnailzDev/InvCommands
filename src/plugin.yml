@@ -30,7 +30,7 @@ commands:
     chest:
         description: Opens a chest at a location
         permission: invcommands.chest
-        usage: /chest [x] [y] [z]
+        usage: /chest <x> <y> <z> [player]
 permissions:
     invcommands.workbench:
         description: Allows the player to open a workbench
