@@ -31,7 +31,7 @@ public class enchantmenttable implements CommandExecutor{
                 if (sender instanceof Player){
                     Player player = (Player) sender;
                     player.openEnchanting(new Location(player.getWorld(), 0,0,0), true);
-                    sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Enchantment Table Oppend!");
+                    sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Enchantment Table Oppend");
                     return true;
                 }
                 else {
@@ -50,7 +50,7 @@ public class enchantmenttable implements CommandExecutor{
                 if (plugin.getServer().getPlayer(args[0]) != null){
                     Player player = plugin.getServer().getPlayer(args[0]);
                     player.openEnchanting(new Location(player.getWorld(), 0,0,0), true);
-                    sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Oppend enchantment table for " + ChatColor.GOLD + args[0]);
+                    sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Oppend Enchantment Table For " + ChatColor.GOLD + args[0]);
                     return true;
                 }
                 else {

@@ -38,7 +38,7 @@ public class openinv implements CommandExecutor{
                             Player player2 = plugin.getServer().getPlayer(args[1]);
                             Player player3 = plugin.getServer().getPlayer(args[2]);
                             player3.openInventory(player2.getInventory());
-                            sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Oppend inventory of " + ChatColor.GOLD + args[1] + ChatColor.GREEN + " for " + ChatColor.GOLD + args[2]);
+                            sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Oppend Inventory Of " + ChatColor.GOLD + args[1] + ChatColor.GREEN + " for " + ChatColor.GOLD + args[2]);
                             return true;
                         }
                         else {
@@ -54,7 +54,7 @@ public class openinv implements CommandExecutor{
                         if (plugin.getServer().getPlayer(args[1]) != null){
                             Player player2 = plugin.getServer().getPlayer(args[1]);
                             player.openInventory(player2.getInventory());
-                            sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Oppend inventory of " + ChatColor.GOLD + args[1]);
+                            sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Oppend Inventory Of " + ChatColor.GOLD + args[1]);
                             return true;
                         }
                         else {

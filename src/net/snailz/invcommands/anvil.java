@@ -33,7 +33,7 @@ public class anvil implements CommandExecutor{
                     Player player = (Player) sender;
                     Inventory i = Bukkit.createInventory(player, InventoryType.ANVIL);
                     player.openInventory(i);
-                    sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Anvil Oppend!");
+                    sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Anvil Oppend");
                     return true;
                 }
                 else {
@@ -53,7 +53,7 @@ public class anvil implements CommandExecutor{
                     Player player = plugin.getServer().getPlayer(args[0]);
                     Inventory i = Bukkit.createInventory(player, InventoryType.ANVIL);
                     player.openInventory(i);
-                    sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Oppend anvil for " + ChatColor.GOLD + args[0]);
+                    sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Oppend Anvil For " + ChatColor.GOLD + args[0]);
                     return true;
                 }
                 else {

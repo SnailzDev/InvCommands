@@ -30,7 +30,7 @@ public class enderchest implements CommandExecutor{
                 if (sender instanceof Player){
                     Player player = (Player) sender;
                     player.openInventory(player.getEnderChest());
-                    sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Enderchest Oppend!");
+                    sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Enderchest Oppend");
                     return true;
                 }
                 else {
@@ -49,7 +49,7 @@ public class enderchest implements CommandExecutor{
                 if (plugin.getServer().getPlayer(args[0]) != null){
                     Player player = plugin.getServer().getPlayer(args[0]);
                     player.openInventory(player.getEnderChest());
-                    sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Oppend enderchest for " + ChatColor.GOLD + args[0]);
+                    sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Oppend Enderchest For " + ChatColor.GOLD + args[0]);
                     return true;
                 }
                 else {

@@ -22,6 +22,7 @@ public class Main extends JavaPlugin{
         this.getCommand("endchest").setExecutor(new enderchest (this));
         this.getCommand("openinv").setExecutor(new openinv (this));
         this.getCommand("anvil").setExecutor(new anvil (this));
+        this.getCommand("chest").setExecutor(new chest (this));
     }
     
 }

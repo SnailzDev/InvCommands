@@ -29,7 +29,7 @@ public class workbench implements CommandExecutor{
                 if (sender instanceof Player){
                     Player player = (Player) sender;
                     player.openWorkbench(new Location(player.getWorld(), 0,0,0), true);
-                    sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Workbench Oppend!");
+                    sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Workbench Oppend");
                     return true;
                 }
                 else {
@@ -48,7 +48,7 @@ public class workbench implements CommandExecutor{
                 if (plugin.getServer().getPlayer(args[0]) != null){
                     Player player = plugin.getServer().getPlayer(args[0]);
                     player.openWorkbench(new Location(player.getWorld(), 0,0,0), true);
-                    sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Oppend workbench for " + ChatColor.GOLD + args[0]);
+                    sender.sendMessage(Main.pluginprefix + ChatColor.GREEN + "Oppend Workbench For " + ChatColor.GOLD + args[0]);
                     return true;
                 }
                 else {

@@ -1,6 +1,6 @@
 name: InvCommands
 main: net.snailz.invcommands.Main
-version: 0.1
+version: 0.3
 author: Snailz
 commands:
     workbench:
@@ -27,6 +27,10 @@ commands:
         description: Opens an anvil
         permission: invcommands.anvil
         usage: /anvil [player]
+    chest:
+        description: Opens a chest at a location
+        permission: invcommands.chest
+        usage: /chest [x] [y] [z]
 permissions:
     invcommands.workbench:
         description: Allows the player to open a workbench
@@ -53,6 +57,9 @@ permissions:
         default: op
     invcommands.anvil.others:
         description: Allows the player to open an anvil for another player
+        default: op
+    invcommands.chest:
+        description: Allows the player to open a chest at a location
         default: op
     invcommands.openinv.inventory.others:
         description: Allows the player to open a players inventory for another player
